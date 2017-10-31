@@ -85,6 +85,9 @@ public class LoginServlet extends HttpServlet {
 
 					//获取总页数
 					int userTotalNum=userDao.findUserTotalNum();
+					
+					System.err.println(userTotalNum+"==="+list);//测试总数核查出来的数
+					
 					int pageNum=userTotalNum/4;
 					if(userTotalNum%4!=0){
 						pageNum++;
@@ -92,19 +95,21 @@ public class LoginServlet extends HttpServlet {
 					
 					
 					  //得到所有的数据 // 
-//					 List<User> list = userDao.findall();
+					 //List<User> list = userDao.findall();
 					  
 					  //fzc end //将数据放到
-					  request.setAttribute("users",list); 
+					  request.setAttribute("users",list);
 					  
 					  request.setAttribute("pageNum",pageNum);
 					  //转发到用户界面中 //修改jsp文件，重新填充数据
 					 
-//					  response.sendRedirect("WEB-INF/users/index.jsp");
+					  
 					  
 					 request.getRequestDispatcher("WEB-INF/users/index.jsp").forward(request, response);
-					// 返回列表界面重定向
+					 // 返回列表界面重定向
 					response.sendRedirect(request.getContextPath() + "/LoginServlet");
+					return ;
+					
 
 				} else {
 					// 登陆失败的 给出提示并跳转到登录注册页面

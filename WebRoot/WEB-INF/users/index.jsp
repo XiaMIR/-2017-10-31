@@ -53,29 +53,15 @@
 			</c:forEach>
 		</c:if>
 	</table>
-	<label class=""  >
 		<a href="#">首&nbsp;页</a>
 		<!-- 此处请求传输页数参数，页数序号根据获取的数据总数计算 -->
 		<%String num=request.getAttribute("pageNum").toString();
 		 %>
 		
 		<%for(int i=0;i<Integer.parseInt(num);i++){ %>
-		<a href="/PageServlet?currentPage="<%=i+1 %>><%=i+1 %></a>
+		<a href="/LoginServlet?currentPage=<%=i+1 %>"><%=i+1 %></a>
 		
 		<%} %>
 		
-		<!-- <strong >1</strong>
-		
-		<a href="#">2</a>
-		<a href="#">3</a>
-		<a href="#">4</a>
-		<a href="#">5</a>
-			<input style="width: 35px; height: 16px">
-		
-		<a href="#" class="#">下一页</a>s
-		<span class="#">
-			<a href="#">返&nbsp;回</a>
-		</span> -->
-    </label>	
 </body>
 </html>
