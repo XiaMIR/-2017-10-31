@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>BMS_Manger_pg</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>cn.leelei.bms.servlet.LoginServlet</servlet-class>
+  
+  
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageServlet</servlet-name>
+    <servlet-class>cn.leelei.bms.servlet.PageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>cn.leelei.bms.servlet.Register</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>cn.leelei.bms.servlet.IndexServlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/WEB-INF/users/index.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageServlet</servlet-name>
+    <url-pattern>/servlet/PageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/servlet/Register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/servlet/IndexServlet</url-pattern>
+  </servlet-mapping> -->
+  
+  
+  <!-- ================================== -->
+  <!-- Filter 过滤器的配置 -->
+  <!-- <filter>
+  <filter-name>CharacterFilter</filter-name>
+  <filter-class>cn.leelei.bms.filter.CharacterFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>CharacterFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  <!-- ================================== -->
+</web-app>

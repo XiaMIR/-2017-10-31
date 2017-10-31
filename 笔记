@@ -1,0 +1,46 @@
+1.web.xml 方式
+<!-- ================================== -->
+  <!-- Filter 过滤器的配置 -->
+  <filter>
+  <filter-name>CharacterFilter</filter-name>
+  <filter-class>cn.leelei.bms.filter.CharacterFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>CharacterFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- ================================== -->
+  
+2.处理中文乱码 CharacterFilter
+ //设置响应请求的编码
+ request.setCharacterEncoding("UTF-8");
+ response.setCharacterEncoding("UTF-8");
+ //继续下传执行
+ filterChain.doFilter(request, response);
+ 
+3.数据库
+
+/**
+	 * 关闭数据源.释放资源
+	 * @param connection
+	 * @param statement
+	 * @param resultSet
+	 */
+	public static void CloseResource(Connection connection,Statement statement,ResultSet resultSet) {
+		try {
+			if(resultSet!=null){
+				resultSet.close();
+			}
+			if(statement!=null){
+				statement.close();
+			}
+			if(connection!=null){
+				connection.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
